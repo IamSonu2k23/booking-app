@@ -1,14 +1,13 @@
 package envconfig
 
 import (
-	"log"
-
+	"fmt"
 	"github.com/joho/godotenv"
 )
 
 func InitEnvVars() {
 
 	if err := godotenv.Load(); err != nil {
-		log.Fatalf("failed to load EnvVars: %s", err)
+		fmt.Println("OOPs .env not file found", err)
 	}
 }
